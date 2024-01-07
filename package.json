@@ -9,8 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "start-pwa": "ng build --prod && http-server -p 8080 -c-1 dist/angular-pwa",
-    "predeploy": "ng build --prod --base-href=/angular-pwa/","deploy": "npx gh-pages -d dist/angular-pwa",
-    "deploys": "npx gh-pages -d dist/angular-pwa"
+    "predeploy": "ng build --prod --base-href=/angular-pwa/",
+    "deploy": "npx gh-pages -d /angular-pwa"
   },
   "private": true,
   "dependencies": {
