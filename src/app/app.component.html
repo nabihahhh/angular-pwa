@@ -93,7 +93,7 @@
   .card {
     border-radius: 4px;
     border: 1px solid #eee;
-    background-color: #fafafa;
+    background-color: white;
     height: 40px;
     width: 200px;
     margin: 0 8px 16px;
@@ -111,8 +111,9 @@
   }
 
   .card.card-small {
-    height: 230px;
-    width: 268px;
+    height: 290px;
+    width: 298px;
+
   }
 
   .card-container .card:not(.highlight-card) {
@@ -302,12 +303,21 @@
     height: 10%;
     top: 0;
     bottom: 0;
-
-  .avail-food {
-
-  }
 }
   }
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.content-box {
+  box-sizing: content-box; 
+}
 </style>
 
 <!-- Toolbar -->
@@ -337,39 +347,70 @@
 
   <div class="card-container">
 
-    <div class="card card-small" (click)="selection.value = 'component'" tabindex="0" height="330">
-      <div>
-        <img class="img-responsive" src="/assets/roti-canai.jpg" alt="image" width="250">
-      </div>
-      <div>
-        <span>Roti Canai</span>
-      </div>                   
-    </div>
-
     <div class="card card-small" (click)="selection.value = 'material'" tabindex="0">
-      <img class="img-responsive" src="/assets/nasi-dagang.jpg" alt="image" width="250">
-
-      <span>Nasi Dagang</span>
+      <div style="display: block;">
+        <img class="img-responsive" src="/assets/nasi-dagang.jpg" alt="image" width="230">
+        <div style="display: inline-block;">
+          <h4 style="text-align: center; font-weight: bold;">Nasi Dagang</h4>
+          <button type="button" class="btn btn-light" style="text-align: left; font-weight: bold; ">Add to cart</button>
+        </div>
+          <h3 style="float: inline-end; background-color: #ffa43b; border: #ffa43b; border-radius: 25px; padding: 3%; font-weight: bold;">Rm8</h3>
+      </div>     
     </div>
 
     <div class="card card-small" (click)="selection.value = 'pwa'" tabindex="0">
-      <img class="img-responsive" src="/assets/nasi-lemak.jpeg" alt="image" width="250">
-
-      <span>Nasi Lemak</span>
+      <div style="display: block;">
+        <img class="img-responsive" src="/assets/nasi-lemak.jpeg" alt="image" width="230">
+        <div style="display: inline-block;">
+          <h4 style="text-align: center; font-weight: bold;">Nasi Lemak</h4>
+          <button type="button" class="btn btn-light" style="text-align: left; font-weight: bold; ">Add to cart</button>
+        </div>
+          <h3 style="float: inline-end; background-color: #ffa43b; border: #ffa43b; border-radius: 25px; padding: 3%; font-weight: bold;">Rm7</h3>
+      </div>
     </div>
 
     <div class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
-      <img class="img-responsive" src="/assets/laksa.jpg" alt="image" width="250">
+      <div style="display: block;">
+        <img class="img-responsive" src="/assets/satay.jpg" alt="image" width="230">
+        <div style="display: inline-block;">
+          <h4 style="text-align: center; font-weight: bold;">Satay</h4>
+          <button type="button" class="btn btn-light" style="text-align: left; font-weight: bold; ">Add to cart</button>
+        </div>
+          <h3 style="float: inline-end; background-color: #ffa43b; border: #ffa43b; border-radius: 25px; padding: 3%; font-weight: bold;">Rm1.20</h3>
+      </div>
+    </div>
 
-      <span>Curry Laksa</span>
-    </div>
     <div class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
-      <img class="img-responsive" src="/assets/cheong-fun.jpg" alt="image" width="250">
-      <span>Chee Cheong Fun</span>
+      <div style="display: block;">
+        <img class="img-responsive" src="/assets/cheong-fun.jpg" alt="image" width="200">
+        <div style="display: inline-block;">
+          <h4 style="text-align: center; font-weight: bold;">Chee Cheong Fun</h4>
+          <button type="button" class="btn btn-light" style="text-align: left; font-weight: bold; ">Add to cart</button>
+        </div>
+          <h3 style="float: inline-end; background-color: #ffa43b; border: #ffa43b; border-radius: 25px; padding: 3%; font-weight: bold;">Rm6.50</h3>
+      </div>
     </div>
+
     <div class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
-      <img class="img-responsive" src="/assets/karipap.jpg" alt="image" width="250">
-      <span>Curry Puffs</span>
+      <div style="display: block;">
+        <img class="img-responsive" src="/assets/roti-canai.jpg" alt="image" width="200">
+        <div style="display: inline-block;">
+          <h4 style="text-align: center; font-weight: bold;">Roti Canai</h4>
+          <button type="button" class="btn btn-light" style="text-align: left; font-weight: bold; ">Add to cart</button>
+        </div>
+          <h3 style="float: inline-end; background-color: #ffa43b; border: #ffa43b; border-radius: 25px; padding: 3%; font-weight: bold;">Rm1.20</h3>
+      </div>
+    </div>
+
+    <div class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
+      <div style="display: block;">
+        <img class="img-responsive" src="/assets/karipap.jpg" alt="image" width="200">
+        <div style="display: inline-block;">
+          <h4 style="text-align: center; font-weight: bold;">Curry Puffs</h4>
+          <button type="button" class="btn btn-light" style="text-align: left; font-weight: bold; ">Add to cart</button>
+        </div>
+          <h3 style="float: inline-end; background-color: #ffa43b; border: #ffa43b; border-radius: 25px; padding: 3%; font-weight: bold;">Rm1</h3>
+      </div>
     </div>
   </div>
 
