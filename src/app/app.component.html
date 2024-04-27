@@ -31,7 +31,7 @@
   }
 
   .spacer {
-    flex: 1;
+    flex: 0.5;
   }
 
   .toolbar {
@@ -45,6 +45,7 @@
     background-color: #303030;
     color: white;
     font-weight: 600;
+    font-size: x-large;
   }
 
   .toolbar img {
@@ -110,8 +111,8 @@
   }
 
   .card.card-small {
-    height: 16px;
-    width: 168px;
+    height: 230px;
+    width: 268px;
   }
 
   .card-container .card:not(.highlight-card) {
@@ -295,19 +296,25 @@
       display: none;
       visibility: hidden;
     }
+
+    .img {
+    position: center-fit;
+    height: 10%;
+    top: 0;
+    bottom: 0;
+
+  .avail-food {
+
+  }
+}
   }
 </style>
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <!-- <img
-    width="40"
-    alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-  /> -->
-  <!-- <div class="spacer"></div>
-  <span>Nabihah Kassim</span>
-    <div class="spacer"></div> -->
+  <div class="spacer"></div>
+  <span>Hungry Now</span>
+    <!-- <div class="spacer"></div> -->
     <!-- <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
       <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
         <rect width="400" height="400" fill="none"/>
@@ -317,50 +324,56 @@
 </div>
 
 <div class="content" role="main">
-
+  <img class="img-responsive" src="/assets/foods2.jpg" alt="image" width="330">
   <!-- Next Steps -->
-  <h2>Hi! I'm Nabihah,</h2>
-  <p>a fullstack developer. (mainly work in .net core and angular in my day to day job) Currently is learning selenium (an automation testing tool) and is interested in exploring more new stuffs mainly on 
-    front-end web development and automation testing. 
+  <p>Discover the flavors of Malaysia with Hungry Now. From nasi lemak to roti canai, order authentic Malaysian cuisine with ease. Explore local favorites, customize your order, and track delivery in real-time.  
   </p>
 
   <input type="hidden" #selection>
 
-  <div class="card-container">
-    <div class="card card-small" (click)="selection.value = 'component'" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+  <div>
+    <h2>Available Foods</h2>
+  </div>
 
-      <span>home</span>
+  <div class="card-container">
+
+    <div class="card card-small" (click)="selection.value = 'component'" tabindex="0" height="330">
+      <div>
+        <img class="img-responsive" src="/assets/roti-canai.jpg" alt="image" width="250">
+      </div>
+      <div>
+        <span>Roti Canai</span>
+      </div>                   
     </div>
 
     <div class="card card-small" (click)="selection.value = 'material'" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      <img class="img-responsive" src="/assets/nasi-dagang.jpg" alt="image" width="250">
 
-      <span>learning</span>
+      <span>Nasi Dagang</span>
     </div>
 
     <div class="card card-small" (click)="selection.value = 'pwa'" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      <img class="img-responsive" src="/assets/nasi-lemak.jpeg" alt="image" width="250">
 
-      <span>projects</span>
+      <span>Nasi Lemak</span>
     </div>
 
     <div class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      <img class="img-responsive" src="/assets/laksa.jpg" alt="image" width="250">
 
-      <span>blog</span>
+      <span>Curry Laksa</span>
+    </div>
+    <div class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
+      <img class="img-responsive" src="/assets/cheong-fun.jpg" alt="image" width="250">
+      <span>Chee Cheong Fun</span>
+    </div>
+    <div class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
+      <img class="img-responsive" src="/assets/karipap.jpg" alt="image" width="250">
+      <span>Curry Puffs</span>
     </div>
   </div>
 
-  <!-- Terminal -->
-  <div class="terminal" [ngSwitch]="selection.value">
-      <pre *ngSwitchDefault>in progress</pre>
-      <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
-      <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
-      <pre *ngSwitchCase="'dependency'">ng add _____</pre>
-      <pre *ngSwitchCase="'test'">ng test</pre>
-      <pre *ngSwitchCase="'build'">ng build --prod</pre>
-  </div>
+  
 
   <!-- Footer -->
   <footer>
